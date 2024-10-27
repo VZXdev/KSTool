@@ -204,8 +204,7 @@ def check(cookie):
   for i in groupIds:
     groupFunds += int(requests.get(f"https://economy.roblox.com/v1/groups/{i}/currency", cookies={'.ROBLOSECURITY': str(cookie)}).json()['robux'])
 
-creationDate = requests.get(f'https://users.roblox.com/v1/users/{userid}').json()['created']
-  display = userdata['displayName'] #display name
+creationDate = requests.get(f'https://users.roblox.com/v1/users/{userid}').json()['created']#display name
   Write.Print(f"[Process] Get Display...\n", Colors.orange, interval=0.0025)
   username = userdata['name'] #username
   Write.Print(f"[Process] Get Username...\n", Colors.orange, interval=0.0025)
@@ -233,7 +232,7 @@ creationDate = requests.get(f'https://users.roblox.com/v1/users/{userid}').json(
   Write.Print(f"Has pin: {pin_bool}\n", Colors.green_to_cyan, interval=0.0025)
   if pin_bool == True:
     Write.Print(f"[advice]: Use Jupiter pin cracker!\n", Colors.orange, interval=0.0025)
-  Write.Print(f"Display name: {display}\n", Colors.green_to_cyan, interval=0.0025)
+  
   Write.Print(f"Premium: {premiumbool}\n", Colors.green_to_cyan, interval=0.0025)
   Write.Print(f"Credit: {credit}\n", Colors.green_to_cyan, interval=0.0025)
   Write.Print(f"Birthday: {birthdate}\n", Colors.green_to_cyan, interval=0.0025)
